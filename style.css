@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+    background-color: #9b878a;
+    padding:2px ;
+}
+.skill_Bar{
+    color: #fff;
+    background-color: #6a7a3d;
+    width: 450px;
+    padding: 15px;
+    margin: 45px auto;
+}
+.skill_Bar ul{
+      margin: 0;
+      overflow: flex;
+}
+.skill_Bar li{
+    list-style-type: none;
+    margin: 45px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+
+}
+.skill_Bar li:before{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    background-color: aliceblue;
+    width: 100%;
+    height: 25px;
+    border-radius: 100px;
+}
+.skill_Bar li:after{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    width: 0;
+    background-color: gold;
+    left: 0;
+    height: 25px;
+    border-radius: 100px;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* /////////////////skill-animation//////////////// */
+
+.skill_Bar li.html:after{
+    animation-name: html;
+}
+.skill_Bar li.css:after{
+    animation-name: css;
+}
+.skill_Bar li.js:after{
+    animation-name: Javascript;
+}
+.skill_Bar li.bs:after{
+    animation-name: Bootstrap;
+}
+.skill_Bar li.jquery:after{
+    animation-name: jquery;
+}
+.skill_Bar li.php:after{
+    animation-name: php;
+}
+
+@keyframes html{
+     to{
+         width: 99%;
+         background-color: purple;
+     }
+}
+@keyframes css{
+     to{
+         width: 95%;
+         background-color: blue;
+     }
+}
+@keyframes Javascript{
+     to{
+         width: 80%;
+         background-color: skyblue;
+     }
+}
+@keyframes Bootstrap{
+     to{
+         width: 95%;
+         background-color: yellow;
+     }
+}
+@keyframes jquery{
+     to{
+         width: 90%;
+         background-color: orange;
+     }
+}
+@keyframes php{
+     to{
+         width: 85%;
+         background-color: red;
+     }
+}
